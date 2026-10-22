@@ -1,0 +1,18 @@
+{
+  "name": "inf255-assignment-4-source-main",
+  "version": "1.0.0",
+  "description": "You will continue building the animal adoption app in this assignment, but instead of working with an array of local data, you will fetch the data from a json file. While fetching the data, your interface will display a \"loading\" message, and depending on the response, show the resulting list or an error message.",
+  "main": "script.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "vite": "^8.3.5"
+  }
+}

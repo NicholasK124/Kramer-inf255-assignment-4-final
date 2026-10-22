@@ -1,0 +1,5 @@
+# Installed packages. Anyone can recreate this folder with `npm install`.
+node_modules/
+
+# Output of `npm run build`. Recreated every time you build.
+dist/

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animal Adoption Board</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Animal Adoption Board</h1>
+      <p>Meet the animals currently staying at our shelter.</p>
+    </header>
+
+    <main>
+      <section aria-labelledby="animals-heading">
+        <h2 id="animals-heading">Animals</h2>
+
+        <p id="animal-count" aria-live="polite"></p>
+
+        <div class="controls">
+          <div class="filters" role="group" aria-label="Filter animals">
+            <button type="button" id="show-all">All</button>
+            <button type="button" id="show-available">Available</button>
+            <button type="button" id="show-adopted">Adopted</button>
+          </div>
+
+          <label for="sort-animals">Sort by:</label>
+          <select id="sort-animals">
+            <option value="default">Original order</option>
+            <option value="name">Name</option>
+            <option value="age">Age</option>
+          </select>
+        </div>
+
+        <div id="animal-list" aria-live="polite">
+          <!-- Animal cards will be added here with JavaScript. -->
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
