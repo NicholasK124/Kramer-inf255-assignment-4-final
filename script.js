@@ -15,7 +15,7 @@
 // Animal Data
 // ------------------------------------
 
-const animals = [
+let animals = [
   { id: 1, name: "Luna", species: "cat", age: 3, adopted: false },
   { id: 2, name: "Biscuit", species: "dog", age: 7, adopted: true },
   { id: 3, name: "Pepper", species: "cat", age: 1, adopted: true },
@@ -165,3 +165,48 @@ sortSelect.addEventListener("change", () => {
   activeSort = sortSelect.value;
   updateDisplay();
 });
+
+async function loadAnimals() {
+  //Finds the HTML elements that we need to display
+  const countText = document.querySelector("#animal-count");
+  const animalList = document.querySelector("#animal-list");
+
+  countText.textContent = "Loading...";
+  animalList.innerHTML = "";
+}
+
+//fetch() is used to get the animals.json file, and await is used to pause the response until the file is found.
+try {
+  const response = await fetch("animals.json");
+
+  //C
+  if (!response.ok) {
+    throw new Error(`Request failed with status ${response.status}`);
+  }
+
+  //Convert reponse to JSON
+  animals = await response.json();
+
+  //Refresh the animal cards and count
+  updateDisplay();
+} catch (error) {
+  // Logging error message for debugging
+  console.error("Error loading animals:", error);
+  // Clear the count message
+  countText.textContent = "";
+
+  //Create paragragh element for error
+  const errorMessage = document.createElement("p");
+
+  //Give the error its message
+  errorMessage.textContent =
+    "Sorry, the animals couldn't be loaded. Try refreshing the page.";
+
+  errorMessage.classList.add("error-message");
+
+  //Put element into animal list
+  animals.appendChild(errorMessage);
+}
+
+//Load the Message
+loadAnimals();

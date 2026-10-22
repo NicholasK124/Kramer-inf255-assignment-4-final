@@ -14,5 +14,8 @@
   "type": "commonjs",
   "devDependencies": {
     "vite": "^8.3.5"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.23"
   }
 }
