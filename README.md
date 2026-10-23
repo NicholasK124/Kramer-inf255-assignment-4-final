@@ -141,7 +141,7 @@ then call it so it runs when the page opens.
    paragraph to `#animal-list` with the class `error-message` that says:
 
    ```
-   Sorry, the animals couldn't be loaded. Try refreshing the page.
+    
    ```
 
 **Required comments:**
