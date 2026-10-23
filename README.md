@@ -1,3 +1,32 @@
+# About this project
+
+How to run the project:
+
+1. Clone the repo and open project folder in the VS Code terminal.
+2. Run npm install in order to install the needed dependencies for the project in the package.json file.
+3. Run 'npm run dev' in the VS Code terminal to start the project.
+4. This will start a local server using Vite opening the project in the default browser.
+
+npm install is needed in order to install the packages listed in the package.json that are required for the project to run.
+
+Dependency check:
+
+- What does Day.js do for this project?
+  Day.js is a lighter JavaScript library that allows for much easier date manipulation and formatting.
+  - What is the size of the `.js` file that `npm run build` reports? The size of the .js file that npm run build reports is 0.82 KB.
+  - Could you have done the same thing without Day.js? Was it worth adding? Yes, I feel like adding Day.js was worth it because the date manipulating was made much easier and much more readable.
+    `npm run build` must finish without errors.
+- Running `npm run build` in the VS Code terminal.
+  PS C:\Users\Nickk\OneDrive - msj.edu\Documents\INF 255\inf255-assignment-4-source-main> npm run build
+  ✓ 6 modules transformed.
+  computing gzip size...
+  dist/index.html 1.48 kB │ gzip: 0.62 kB
+  dist/assets/index-CC9gVhfT.css 0.82 kB │ gzip: 0.42 kB
+  dist/assets/index-CrGh8XyE.js 10.90 kB │ gzip: 4.53 kB
+  ✓ built in 1.31s
+
+  test
+
 # Assignment 4 — Loading Data with async and npm
 
 You will continue building the animal adoption app in this assignment, but instead of working with an array of local data, you will fetch the data from a json file. While fetching the data, your interface will display a "loading" message, and depending on the response, show the resulting list or an error message.
@@ -141,7 +170,7 @@ then call it so it runs when the page opens.
    paragraph to `#animal-list` with the class `error-message` that says:
 
    ```
-    
+
    ```
 
 **Required comments:**
